@@ -21,6 +21,26 @@ main {
   box-shadow: 0 4px 4px grey;
 }
 
+.search-wrapper__button {
+  border: none;
+  padding: 0.5rem;
+  width: 8.5rem;
+  border-radius: 0.5rem;
+}
+
+.search-wrapper__button--left {
+  background-color: cyan;
+}
+
+.search-wrapper__button--right {
+  background-color: rgb(60, 51, 238);
+}
+
+.search-wrapper__button-link {
+  text-decoration: none;
+  color: white;
+}
+
 .task-board {
   display: flex;
   justify-content: space-around;
@@ -30,10 +50,43 @@ main {
 .task-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.task-column__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+
+.task-column__list-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .task-column__title {
   text-decoration: underline;
+}
+
+.list-item__category-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 0.5rem;
+  padding: 0rem;
+}
+
+.list-item__category-item {
+  background-color: black;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
 }
 
 .navigation {
@@ -52,4 +105,20 @@ main {
   flex-direction: column;
   align-items: center;
   list-style-type: none;
+}
+
+.backlog-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backlog__title {
+  font-size: 3rem;
+}
+
+.backlog__list {
+  list-style: none;
+  font-size: 1rem;
+  padding: 0rem;
 }
