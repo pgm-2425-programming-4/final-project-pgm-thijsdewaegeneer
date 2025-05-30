@@ -1,0 +1,47 @@
+.task-board {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+.task-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-column__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+
+.task-column__list-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-column__title {
+  text-decoration: underline;
+}
+
+.list-item__category-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 0.5rem;
+  padding: 0rem;
+}
+
+.list-item__category-item {
+  background-color: black;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+}
