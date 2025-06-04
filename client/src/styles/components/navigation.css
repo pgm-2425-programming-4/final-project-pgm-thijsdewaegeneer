@@ -1,0 +1,22 @@
+
+
+.header__navigation {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem;
+    
+}
+
+.header__navigation-list-title {
+    color: grey;
+}
+
+.header__navigation-list-items {
+    list-style-type: none;
+    color: black;
+}
+
+.header__navigation-item {
+    text-decoration: none;
+    color: black;
+}
