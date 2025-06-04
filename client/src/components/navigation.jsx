@@ -1,16 +1,22 @@
+
 function Navigation() {
-    
+    console.log("Navigation.jsx succesfully loaded in")
     return (
-        <nav className="navigation">
-            <ul className="navigation__list">
+        <nav className="header__navigation">
+            <a className="header__navigation-item" href="">HOME</a>
 
-                <h1 className="navigation__title">Projects</h1>
-                <li className="navigation__list-item">PGM3</li>
-                <li className="navigation__list-item">PGM4</li>
+            <div className="header__navigation-list">
+                <h2 className="header__navigation-list-title">PROJECTS</h2>
+                <ul className="header__navigation-list-items">
+                    <li className="header__navigation-list-item">PGM3</li>
+                    <li className="header__navigation-list-item">PGM4</li>
+                </ul>
+            </div>
 
-            </ul>
+            <h2 className="header__navigation-list-title">INFO</h2>
+            <a className="header__navigation-item" href="">ABOUT</a>
         </nav>
-    );
+    )
 }
 
-export default Navigation;
+export default Navigation
