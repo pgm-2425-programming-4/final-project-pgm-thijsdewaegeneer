@@ -1,11 +1,9 @@
 @import url("../components/navigation.css");
+@import url("../components/searcher.css");
 @import url("reset.css");
 
 .app-root {
     display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     box-sizing: border-box;
 }

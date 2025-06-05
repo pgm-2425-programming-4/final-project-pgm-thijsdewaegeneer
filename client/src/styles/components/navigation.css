@@ -5,9 +5,12 @@
 .header__navigation {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+    align-items: center;
     border-right: 1px black solid;
-    height: 100vh;
+    height: 100vh; 
+    margin-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
 }
 
 .header__navigation-list-title {
