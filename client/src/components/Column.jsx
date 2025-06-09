@@ -34,7 +34,7 @@ function Column () {
             <li className="board__list-item">
             <div className="card">
                 <h3 className="card__title"></h3>
-                <p className="card__context">.</p>
+                <p className="card__context"></p>
             </div>
             </li>
         </ul>
