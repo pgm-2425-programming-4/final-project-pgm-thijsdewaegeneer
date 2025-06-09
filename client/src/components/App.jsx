@@ -1,5 +1,6 @@
 import Navigation from "./Navigation";
 import Searcher from "./Searcher"
+import Board from "./Board";
 import "../styles/base/main.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         </header>
         <main>
             <Searcher />
+            <Board />
         </main>
         </>
     )
