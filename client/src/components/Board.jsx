@@ -4,7 +4,7 @@ function Board() {
     console.log("Board succesfully loaded")
 
     return (
-        <div className="board-wrapper">
+        <div className="board">
             <Column />
         </div>
     )
