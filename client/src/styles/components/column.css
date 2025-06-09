@@ -1,0 +1,15 @@
+.board__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0rem;
+}
+
+.board__list-item {
+    display: flex;
+    flex-direction: column;
+    width: 11rem;
+    margin-top: 1rem;
+
+}
