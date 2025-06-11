@@ -19,7 +19,6 @@ function Column () {
 
     return (
     <>
-
       {data.data
       .filter(status => status.StatusType !== "Backlog")
       .map((status) => (
@@ -29,7 +28,6 @@ function Column () {
         </div>
       ))
       }
-
     </>
         
     )
