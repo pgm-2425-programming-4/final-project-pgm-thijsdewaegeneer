@@ -1,5 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
 import { fetchStatus } from "../api/categories/FetchCategory";
+import TaskList from "./TaskList";
 import React from "react";
 
 function Column () {
@@ -24,14 +25,7 @@ function Column () {
       .map((status) => (
         <div key={status.id} className="board__list-wrapper">
           <h2 className="board__list-title">{status.StatusType}</h2>
-          <ul className="board__list">
-            <li className="board__list-item">
-              <div className="card">
-                <h3 className="card__title">Dummy text</h3>
-                <p className="card__context">Dummy text</p>
-              </div>
-            </li>
-          </ul>
+          < TaskList />
         </div>
       ))
       }
