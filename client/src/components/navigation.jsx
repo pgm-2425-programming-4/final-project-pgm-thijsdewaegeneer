@@ -10,8 +10,8 @@ function Navigation() {
             <div className="header__navigation-list">
                 <h2 className="header__navigation-list-title">PROJECTS</h2>
                 <ul className="header__navigation-list-items">
-                    <li className="header__navigation-list-item">PGM3</li>
-                    <li className="header__navigation-list-item">PGM4</li>
+                    <li className="header__navigation-list-item"><Link to="">PGM3</Link></li>
+                    <li className="header__navigation-list-item"><Link to="">PGM4</Link></li>
                 </ul>
             </div>
 
