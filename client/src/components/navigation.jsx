@@ -1,9 +1,11 @@
 
+import { Link } from "@tanstack/react-router";
+
 function Navigation() {
     console.log("Navigation.jsx succesfully loaded in")
     return (
         <nav className="header__navigation">
-            <a className="header__navigation-item" href="">HOME</a>
+            <Link className="header__navigation-item" to="/">HOME</Link>
 
             <div className="header__navigation-list">
                 <h2 className="header__navigation-list-title">PROJECTS</h2>
@@ -14,7 +16,7 @@ function Navigation() {
             </div>
 
             <h2 className="header__navigation-list-title">INFO</h2>
-            <a className="header__navigation-item" href="">ABOUT</a>
+            <Link className="header__navigation-item" to="/about">ABOUT</Link>
         </nav>
     )
 }
