@@ -1,5 +1,6 @@
 import { createFileRoute, Outlet } from '@tanstack/react-router'
 import Navigation from "../components/Navigation.jsx"
+
 export const Route = createFileRoute('/')({
   component: RouteComponent,
 })
@@ -7,10 +8,10 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
   return (
     <>
-      <Navigation />
-      <div>
-        Hallo en welkom op deze app, gemaakt door Thijs
-      </div>
+        <Navigation />
+        <div>
+          <h2>Hallo en welkom op deze app, gemaakt door Thijs</h2>
+        </div>
     </>
   )
 }
