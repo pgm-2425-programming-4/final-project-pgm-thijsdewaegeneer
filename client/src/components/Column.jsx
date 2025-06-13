@@ -24,7 +24,7 @@ function Column () {
       .map((status) => (
         <div key={status.id} className="board__list-wrapper">
           <h2 className="board__list-title">{status.StatusType}</h2>
-          < TaskList />
+          < TaskList/>
         </div>
       ))
       }

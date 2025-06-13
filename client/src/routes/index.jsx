@@ -8,10 +8,15 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
   return (
     <>
+      <header>
         <Navigation />
+      </header>
+      
+      <main>
         <div>
           <h2>Hallo en welkom op deze app, gemaakt door Thijs</h2>
         </div>
+      </main>
     </>
   )
 }
