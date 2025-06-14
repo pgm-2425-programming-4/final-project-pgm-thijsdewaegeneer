@@ -3,6 +3,7 @@
 @import url("../components/board.css");
 @import url("../components/column.css");
 @import url("../components/card.css");
+@import url("../components/about.css");
 @import url("reset.css");
 
 .app-root {
