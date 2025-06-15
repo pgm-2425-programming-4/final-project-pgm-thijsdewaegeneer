@@ -26,10 +26,10 @@ function TaskList({ statusName }) {
   return (
 <ul className="board__list">
   {filteredTasks.map((task) => (
-    <li key={task.id} className="board__list-item">
+    <li key={task.documentId} className="board__list-item">
       <div className="card">
         <h3 className="card__title">{task.Title}</h3>
-        <p className="card__context">{task.Description}</p>
+        <p className="card__context">{}</p>
       </div>
     </li>
   ))}
