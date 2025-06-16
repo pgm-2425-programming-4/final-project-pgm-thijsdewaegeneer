@@ -10,6 +10,7 @@ function App() {
         <header>
             <Navigation /> 
         </header>
+        
         <main>
             <Searcher />
             <Board />
