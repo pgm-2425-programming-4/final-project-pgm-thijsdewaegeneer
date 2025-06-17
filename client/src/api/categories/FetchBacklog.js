@@ -1,6 +1,6 @@
 import { API_TOKEN, API_URL} from "../../constants/constants.js"
 
-export const fetchStatus = async () => {
+export const fetchBacklog = async () => {
     const response = await fetch (
            `${API_URL}/statuses?populate=*&filters[StatusType][$eq]=Backlog`,
         {
