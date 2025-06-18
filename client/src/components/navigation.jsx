@@ -1,24 +1,39 @@
-
+import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
+import { fetchProjects } from "../api/projects/FetchProjects";
 
 function Navigation() {
-    console.log("Navigation.jsx succesfully loaded in")
-    return (
-        <nav className="header__navigation">
-            <Link className="header__navigation-item" to="/">HOME</Link>
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ['projects'],
+    queryFn: fetchProjects,
+  });
 
-            <div className="header__navigation-list">
-                <h2 className="header__navigation-list-title">PROJECTS</h2>
-                <ul className="header__navigation-list-items">
-                    <li className="header__navigation-list-item"><Link to="/projects/nil5uohbhtd7s8xkkf2yjo5k">PGM3</Link></li>
-                    <li className="header__navigation-list-item"><Link to="/projects/b7x9qqj5a2wood1wvxsoy72m">PGM4</Link></li>
-                </ul>
-            </div>
+  const projects = data?.data || [];
 
-            <h2 className="header__navigation-list-title">INFO</h2>
-            <Link className="header__navigation-item" to="/about">ABOUT</Link>
-        </nav>
-    )
+  return (
+    <nav className="header__navigation">
+      <Link className="header__navigation-item" to="/">HOME</Link>
+
+      <div className="header__navigation-list">
+        <h2 className="header__navigation-list-title">PROJECTS</h2>
+        {isLoading && <p>Loading projects...</p>}
+        {isError && <p>Error loading projects: {error.message}</p>}
+
+        <ul className="header__navigation-list-items">
+          {projects.map(project => (
+            <li key={project.id} className="header__navigation-list-item">
+              <Link to={`/projects/${project.documentId}`}>
+                {project.Title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h2 className="header__navigation-list-title">INFO</h2>
+      <Link className="header__navigation-item" to="/about">ABOUT</Link>
+    </nav>
+  );
 }
 
-export default Navigation
+export default Navigation;
