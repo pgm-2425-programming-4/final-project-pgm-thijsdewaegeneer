@@ -1,11 +1,11 @@
 import Column from "./Column"
 
-function Board() {
+function Board({ projectId}) {
     console.log("Board succesfully loaded")
 
     return (
         <div className="board">
-            <Column />
+            <Column projectId={projectId} />
         </div>
     )
 }
