@@ -1,36 +1,39 @@
-import {useQuery} from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { fetchStatus } from "../api/categories/FetchCategory";
+import { fetchTask } from "../api/tasks/FetchTask";
 import TaskList from "./TaskList";
 import React from "react";
 
-function Column () {
-    const { isPending, isError, data, error } = useQuery({ 
+function Column({ projectId }) {
+  const { data: statusesData } = useQuery({ 
     queryKey: ['statuses'], 
-    queryFn: fetchStatus
-    });
+    queryFn: fetchStatus 
+  });
 
-    if(isPending) {
-        return <span>Loading...</span>
-    }
-    if(isError) {
-        return <span>Error: {error.message}</span>
-    }
-    console.log("Column succesfully loaded in")
+  const { data: tasksData } = useQuery({
+    queryKey: ['tasks'], 
+    queryFn: fetchTask 
+  });
+  
+  const tasks = tasksData?.data || [];
 
-    return (
+  const tasksInProject = tasks.filter(task => task.project?.documentId === projectId);
+
+  return (
     <>
-      {data.data
-      .filter(status => status.StatusType !== "Backlog")
-      .map((status) => (
-        <div key={status.id} className="board__list-wrapper">
-          <h2 className="board__list-title">{status.StatusType}</h2>
-          < TaskList/>
-        </div>
-      ))
-      }
+      {statusesData?.data
+        ?.filter((status) => status.StatusType !== "Backlog")
+        .map(status => {
+          const tasksInStatus = tasksInProject.filter(task => task.Task?.StatusType === status.StatusType);
+          return (
+            <div key={status.id} className="board__list-wrapper">
+              <h2 className="board__list-title">{status.StatusType}</h2>
+              <TaskList tasks={tasksInStatus} statusId={status.id} />
+            </div>
+          );
+        })}
     </>
-        
-    )
+  );
 }
 
-export default Column
+export default Column;
