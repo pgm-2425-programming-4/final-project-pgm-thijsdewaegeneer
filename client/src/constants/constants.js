@@ -1,7 +1,0 @@
-export const API_URL = import.meta.env.PROD
-  ? "https://final-project-pgm-thijsdewaegeneer.onrender.com/api"
-  : "http://localhost:1337/api";
-  
-export const API_TOKEN = import.meta.env.PROD
-  ? "9be59bf3cd5fca762c16c4f7f481fa4e8670375aef5cea53d81f26b8edf5913e740315a6f24aa90546a97951e80ff012316e5976bbdbab79b5f0fea315ea6f4782894cc392f86a519bfab905e54604bb311a42f359480d56ccf8e05b7b549d7e7c70ac2ef460a37555016792afcad4ab204249564733e54366d28e36e81a5d6e"
-  : "7038dc96bbe59352b994a58f06e57b23bcedc412653e618f78b136951bcd664b775c9db5d475fb1a75c9d50c755a903393d444329ca0f4ad8e33a831b037c44e3e3d9d4f65a26e748f8bb1d1d78ef6f3d84d558e98882812f6139aac64632478a85960beaa8d7bbbe1754fdfd84fdd5ad892d2fc78e00a5fb39e4980e4be8362";
