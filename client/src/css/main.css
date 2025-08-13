@@ -1,1 +1,8 @@
 @import url(reset.css);
+@import url(./components/navigation.css);
+
+.body { 
+    display: flex;
+    height: 100%;
+}
+

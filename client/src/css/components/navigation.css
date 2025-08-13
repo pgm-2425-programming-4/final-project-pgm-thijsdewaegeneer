@@ -1,0 +1,39 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    height: 100vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav__title {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav__pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav__pages-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav__list {
+    margin-top: 1rem;
+}
+
+.nav__list-item {
+    list-style-type: none;
+    padding-top: 1rem;
+}
+
+.nav__list-link {
+    text-decoration: none;
+    color: black;
+}
