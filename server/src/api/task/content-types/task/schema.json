@@ -13,16 +13,6 @@
   "attributes": {
     "Title": {
       "type": "string"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
-    "project": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project.project"
     }
   }
 }
