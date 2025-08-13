@@ -9,3 +9,14 @@ export async function fetchProjects() {
     const data = await response.json();
     return data
 }
+
+export async function fetchProjectsById(ProjectId) {
+    const response = await fetch(`${API_URL}/projects?filters[id][$eq]=${ProjectId}&populate=*`, {
+        headers: {
+            Authorization: `Bearer ${API_TOKEN}`
+        },
+    })
+    const data = await response.json();
+    return data
+}
+
