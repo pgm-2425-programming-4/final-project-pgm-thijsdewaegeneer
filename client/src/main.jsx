@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient();
 const router = createRouter({ routeTree });
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('body')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
