@@ -10,14 +10,23 @@ export const Route = createRootRoute({
 })
 
 function RootComponent() {
-
+    const { data } = useQuery({
+        queryKey: ['projects'],
+        queryFn: fetchProjects,
+    })
     return (
         <>
-        <navigation className="nav">
+        <nav className="nav">
             <ul className="nav__list">
-                {/* loop here with data.map */}
+                {data?.data.map(project => (
+                    <li key={project.id} className="nav__list-item"> 
+                    <Link to={`/projects/${project.documentId}`}>
+                    {project.Title}
+                    </Link>
+                    </li>
+                ))}
             </ul>
-        </navigation>
+        </nav>
 
         < Outlet />
         < TanStackRouterDevtools />
