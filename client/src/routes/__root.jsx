@@ -17,12 +17,26 @@ function RootComponent() {
     return (
         <>
         <nav className="nav">
+            <h2 className="nav__title">
+                PROJECTS
+            </h2>
+
+            <div className="nav__pages">
+                <Link to="/" className="nav__pages-link">
+                    Home
+                </Link>
+
+                <Link to="/about" className="nav__pages-link">
+                    About
+                </Link>
+            </div>
+            
             <ul className="nav__list">
                 {data?.data.map(project => (
                     <li key={project.id} className="nav__list-item"> 
-                    <Link to={`/projects/${project.documentId}`}>
+                    <Link to={`/projects/${project.documentId}`} className="nav__list-link">
                     {project.Title}
-                    </Link>
+                    </Link >
                     </li>
                 ))}
             </ul>
